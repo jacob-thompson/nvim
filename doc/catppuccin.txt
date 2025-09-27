@@ -612,8 +612,20 @@ leap.nvim>lua
 
 lightline.vimSpecial ~
 
+Use the main colorscheme which auto-detects your current Catppuccin flavor:
+
 >vim
     let g:lightline = {'colorscheme': 'catppuccin'}
+<
+
+Or explicitly specify a flavor:
+
+>vim
+    " Available flavors: latte, frappe, macchiato, mocha
+    let g:lightline = {'colorscheme': 'catppuccin-mocha'}
+    let g:lightline = {'colorscheme': 'catppuccin-latte'}
+    let g:lightline = {'colorscheme': 'catppuccin-frappe'}
+    let g:lightline = {'colorscheme': 'catppuccin-macchiato'}
 <
 
 lightspeed.nvim>lua

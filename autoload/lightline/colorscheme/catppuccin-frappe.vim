@@ -1,5 +1,4 @@
-" Auto-detect current Catppuccin flavor using the same logic as the main module
-let s:c = has("nvim") == 1 ? luaeval('require("catppuccin.palettes").get_palette()') : luaeval('vim.dict(require("catppuccin.palettes").get_palette())')
+let s:c = has("nvim") == 1 ? luaeval('require("catppuccin.palettes").get_palette("frappe")') : luaeval('vim.dict(require("catppuccin.palettes").get_palette("frappe"))')
 
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 let s:p.normal.left = [ [ s:c.mantle, s:c.blue ], [ s:c.blue, s:c.base ] ]
@@ -20,4 +19,4 @@ let s:p.tabline.right = copy(s:p.inactive.right)
 let s:p.normal.error = [ [ s:c.mantle, s:c.red ] ]
 let s:p.normal.warning = [ [ s:c.mantle, s:c.yellow ] ]
 
-let g:lightline#colorscheme#catppuccin#palette = lightline#colorscheme#fill(s:p)
+let g:lightline#colorscheme#catppuccin_frappe#palette = lightline#colorscheme#fill(s:p)

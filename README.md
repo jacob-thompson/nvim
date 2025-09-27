@@ -866,9 +866,23 @@ leap = false
 
 <details> <summary>Special</summary>
 
+Use the main colorscheme which auto-detects your current Catppuccin flavor:
+
 ```vim
 let g:lightline = {'colorscheme': 'catppuccin'}
 ```
+
+Or explicitly specify a flavor:
+
+```vim
+" Available flavors: latte, frappe, macchiato, mocha
+let g:lightline = {'colorscheme': 'catppuccin-mocha'}
+let g:lightline = {'colorscheme': 'catppuccin-latte'}
+let g:lightline = {'colorscheme': 'catppuccin-frappe'}
+let g:lightline = {'colorscheme': 'catppuccin-macchiato'}
+```
+
+The flavor-specific colorschemes are useful when you want to use a different lightline flavor than your main colorscheme, or when you want to ensure consistency across different configurations.
 
 </details>
 <!-- lightline.vim -->
@@ -1661,6 +1675,30 @@ require("nvim-treesitter.configs").setup {
     },
 }
 ```
+
+### How do I use different Catppuccin flavors with lightline?
+
+Catppuccin provides multiple ways to configure lightline with different flavors:
+
+**Option 1: Auto-detection (recommended)**
+```vim
+let g:lightline = {'colorscheme': 'catppuccin'}
+```
+This automatically uses the same flavor as your main Catppuccin colorscheme.
+
+**Option 2: Explicit flavor selection**
+```vim
+let g:lightline = {'colorscheme': 'catppuccin-mocha'}
+let g:lightline = {'colorscheme': 'catppuccin-latte'}
+let g:lightline = {'colorscheme': 'catppuccin-frappe'}
+let g:lightline = {'colorscheme': 'catppuccin-macchiato'}
+```
+
+**Troubleshooting lightline issues:**
+
+- **Colors don't match main colorscheme**: Ensure you're using the correct flavor name or use `'catppuccin'` for auto-detection
+- **Lightline not updating**: Restart Vim/Neovim or run `:call lightline#colorscheme()` after changing colorschemes
+- **Invalid colorscheme error**: Make sure the Catppuccin plugin is properly loaded before setting lightline colorscheme
 
 ### Why aren't my colors the same as the previews?
 
