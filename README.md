@@ -882,6 +882,19 @@ let g:lightline = {'colorscheme': 'catppuccin-frappe'}
 let g:lightline = {'colorscheme': 'catppuccin-macchiato'}
 ```
 
+**Complete example configuration:**
+
+```vim
+" Use Catppuccin Mocha for the main colorscheme but Latte for lightline
+colorscheme catppuccin-mocha
+let g:lightline = {
+\   'colorscheme': 'catppuccin-latte',
+\   'active': {
+\     'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
+\   }
+\ }
+```
+
 The flavor-specific colorschemes are useful when you want to use a different lightline flavor than your main colorscheme, or when you want to ensure consistency across different configurations.
 
 </details>
